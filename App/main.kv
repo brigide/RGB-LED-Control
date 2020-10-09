@@ -1,0 +1,78 @@
+#:import md_icons kivymd.icon_definitions.md_icons
+
+<SM>:
+    Welcome:
+        name: 'welcome'
+        Label:
+            text: "olá, Bruno"
+            pos_hint: {"center_x": 0.5, "center_y": 0.7}
+            color: [0, 0, 0, 1]
+
+        MDRaisedButton:
+            text: "entrar no quarto"
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            on_release: root.current = 'mainWindow'
+
+    MainWindow:
+        name: 'mainWindow'
+        Image:
+            source: 'quarto2.jpeg'
+            size: self.texture_size
+            pos_hint: {"center_x": 0.5, "center_y": 0.9}
+
+        MDRaisedButton:
+            text: "arco-iris"
+            pos_hint: {"center_x": 0.5, "center_y": 0.7}
+            on_release: root.rainbow()
+
+        MDRaisedButton:
+            text: "vermelho"
+            pos_hint: {"center_x": 0.25, "center_y": 0.6}
+            on_release: root.red()
+
+        MDRaisedButton:
+            text: "verde"
+            pos_hint: {"center_x": 0.75, "center_y": 0.6}
+            on_release: root.green()
+
+        MDRaisedButton:
+            text: "azul"
+            pos_hint: {"center_x": 0.25, "center_y": 0.5}
+            on_release: root.blue()
+
+        MDRaisedButton:
+            text: "amarelo"
+            pos_hint: {"center_x": 0.75, "center_y": 0.5}
+            on_release: root.yellow()
+
+        MDRaisedButton:
+            text: "roxo"
+            pos_hint: {"center_x": 0.25, "center_y": 0.4}
+            on_release: root.purple()
+
+        MDRaisedButton:
+            text: "ciano"
+            pos_hint: {"center_x": 0.75, "center_y": 0.4}
+            on_release: root.cyan()
+
+        MDRectangleFlatButton:
+            text: "apagar"
+            pos_hint: {"center_x": 0.5, "center_y": 0.3}
+            on_release: root.off()
+
+
+        MDFloatingActionButton:
+            icon: "chevron-left"
+            md_bg_color: app.theme_cls.primary_color
+            pos_hint: {"center_x": 0.1, "center_y": 0.95}
+            on_release: root.current = 'welcome'
+
+
+        MDLabel:
+            id: stts
+            text: 'a fita está '
+            pos_hint: {"center_x": 0.8, "center_y": 0.2}
+
+
+<MainWindow>:
+
